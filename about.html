@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Venus Furnitures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#FAF7F2',
+              beige: '#E8E0D5',
+              darkwood: '#3D2B1F',
+              gold: '#B8860B',
+              bronze: '#CD7F32',
+              charcoal: '#2C2C2C',
+            },
+            fontFamily: {
+              serif: ['Playfair Display','Georgia','serif'],
+              sans: ['Lato','Arial','sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body { box-sizing:border-box; }
+      .nav-link{position:relative;}
+      .nav-link::after{
+        content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;
+        background:linear-gradient(90deg,#B8860B,#CD7F32);transition:width .3s ease;
+      }
+      .nav-link:hover::after{width:100%;}
+      .gold-gradient{
+        background:linear-gradient(135deg,#B8860B 0%,#CD7F32 50%,#B8860B 100%);
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        background-clip:text;
+      }
+      .animate-on-scroll{
+        opacity:0;
+        transform:translateY(30px);
+        transition:opacity .5s ease-out,transform .5s ease-out;
+      }
+      .animate-on-scroll.visible{
+        opacity:1;
+        transform:translateY(0);
+      }
+    </style>
+  </head>
+
+  <body class="bg-cream text-charcoal font-sans">
+    <!-- NAV -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg shadow-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold to-bronze flex items-center justify-center">
+              <span class="text-white font-serif font-bold text-xl">V</span>
+            </div>
+            <div>
+              <h1 class="font-serif text-2xl font-bold text-darkwood leading-tight">Venus</h1>
+              <p class="text-[11px] text-gold tracking-[0.25em] uppercase">Furnitures</p>
+            </div>
+          </div>
+
+          <div class="hidden lg:flex items-center gap-8 text-sm font-medium">
+            <a href="index.html" class="nav-link text-darkwood">Home</a>
+            <a href="about.html" class="nav-link text-gold">About</a>
+            <a href="products.html" class="nav-link text-darkwood">Products</a>
+            <a href="collections.html" class="nav-link text-darkwood">Collections</a>
+            <a href="reviews.html" class="nav-link text-darkwood">Reviews</a>
+            <a href="contact.html" class="nav-link text-darkwood">Contact / Get Quote</a>
+          </div>
+
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-darkwood">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-lg shadow-xl">
+        <div class="px-4 py-6 space-y-4 text-sm">
+          <a href="index.html" class="block text-darkwood py-2 border-b border-beige">Home</a>
+          <a href="about.html" class="block text-gold py-2 border-b border-beige">About</a>
+          <a href="products.html" class="block text-darkwood py-2 border-b border-beige">Products</a>
+          <a href="collections.html" class="block text-darkwood py-2 border-b border-beige">Collections</a>
+          <a href="reviews.html" class="block text-darkwood py-2 border-b border-beige">Reviews</a>
+          <a href="contact.html" class="block text-darkwood py-2 border-b border-beige">Contact / Get Quote</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="mb-10 animate-on-scroll">
+          <p class="text-xs uppercase tracking-[0.25em] text-gold mb-2">About Us</p>
+          <h1 class="font-serif text-4xl md:text-5xl font-bold text-darkwood">
+            The Story of <span class="gold-gradient">Venus Furnitures</span>
+          </h1>
+        </header>
+
+        <div class="grid lg:grid-cols-3 gap-12 items-start">
+          <div class="lg:col-span-2 space-y-4 text-sm md:text-base text-charcoal/80 leading-relaxed animate-on-scroll">
+            <p>
+              Venus Furnitures is a trusted furniture showroom in Pune and an authorised dealer of
+              <span class="font-semibold">Godrej Interio (division of Godrej &amp; Boyce)</span>.
+            </p>
+            <p>
+              We are an <span class="font-semibold">ISO 9001:2008 certified company</span> offering
+              wooden, steel and modular furniture along with interior solutions for homes, offices,
+              farms, resorts, hospitals, educational institutes and corporate offices.
+            </p>
+            <p>
+              Our 4,000+ sq. ft showroom at Market Yard, Pune showcases sofa sets, armchairs, dining tables,
+              wall units, bedroom sets, office furniture, décor accessories and custom furniture,
+              so you can see and feel the quality before you decide.
+            </p>
+            <p>
+              Beyond products, we also undertake turnkey projects – from planning and design to execution –
+              giving you a single partner for furniture and interiors.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-6 mt-4 text-sm">
+              <div class="bg-cream rounded-2xl p-5 border border-beige/70">
+                <p class="font-semibold text-darkwood mb-2">What We Offer</p>
+                <p>• Sofa sets, armchairs, recliners</p>
+                <p>• Dining tables, chairs, crockery / wall units</p>
+                <p>• Beds, wardrobes, dressers, storage</p>
+                <p>• Office desks, workstations, conference tables</p>
+                <p>• Custom furniture designed to your measurements</p>
+                <p>• Décor accessories to complete your space</p>
+              </div>
+              <div class="bg-cream rounded-2xl p-5 border border-beige/70">
+                <p class="font-semibold text-darkwood mb-2">Who We Serve</p>
+                <p>• Homes and apartments</p>
+                <p>• Corporate offices and startups</p>
+                <p>• Farms, resorts and holiday homes</p>
+                <p>• Hospitals and healthcare spaces</p>
+                <p>• Schools, colleges and training institutes</p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="bg-white rounded-2xl shadow-md border border-beige/70 p-6 text-xs animate-on-scroll">
+            <p class="font-serif text-xl font-bold text-darkwood mb-3">Showroom Snapshot</p>
+            <p class="mb-2">• 4,000+ sq. ft furniture showroom in Market Yard, Pune.</p>
+            <p class="mb-2">• Authorised dealer of Godrej Interio.</p>
+            <p class="mb-2">• ISO 9001:2008 certified company.</p>
+            <p class="mb-4">• Furniture and interiors for homes, offices, farms, resorts, hospitals and institutes.</p>
+
+            <div class="border border-dashed border-gold/60 rounded-xl p-3">
+              <p class="font-semibold text-darkwood mb-1">AI Image Idea</p>
+              <p class="text-[11px] text-charcoal/70">
+                Replace this card with an AI image like: “team of furniture experts helping a family choose
+                a sofa in a modern Indian furniture showroom, warm lighting, photo realistic”.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-darkwood text-white pt-12 pb-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-10 mb-8">
+          <div>
+            <h4 class="font-serif text-2xl font-bold mb-2">Venus Furnitures</h4>
+            <p class="text-white/70 text-sm mb-2">
+              Authorised dealer of Godrej Interio • ISO 9001:2008 certified
+            </p>
+            <p class="text-white/60 text-sm">
+              Furniture and interior solutions for homes, offices, farms, resorts, hospitals,
+              educational institutes and corporate offices.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-serif text-xl font-bold mb-3">Showroom</h4>
+            <p class="text-white/70 text-sm">
+              Plot No. 15, Girnar House,<br/>
+              Adarsh Society, Main Road,<br/>
+              Market Yard, Pune – 411002,<br/>
+              Maharashtra, India.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-serif text-xl font-bold mb-3">Contact</h4>
+            <p class="text-white/70 text-sm">
+              Phone: 020-2426 7831 / 020-2426 7832<br/>
+              Fax: 020-2426 7832<br/>
+              Website: www.venusfurnitures.com
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-4 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/50">
+          <p>© 2024 Venus Furnitures. All rights reserved.</p>
+          <p>Market Yard, Pune • India 🇮🇳</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const mb=document.getElementById('mobile-menu-btn');
+      const mm=document.getElementById('mobile-menu');
+      mb.addEventListener('click',()=>mm.classList.toggle('hidden'));
+      mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mm.classList.add('hidden')));
+
+      const obs=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+      },{threshold:0.2});
+      document.querySelectorAll('.animate-on-scroll').forEach(el=>obs.observe(el));
+    </script>
+  </body>
+</html>

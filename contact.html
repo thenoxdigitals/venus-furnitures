@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact / Get Quote - Venus Furnitures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors:{cream:'#FAF7F2',beige:'#E8E0D5',darkwood:'#3D2B1F',gold:'#B8860B',bronze:'#CD7F32',charcoal:'#2C2C2C'},
+            fontFamily:{serif:['Playfair Display','Georgia','serif'],sans:['Lato','Arial','sans-serif']}
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body{box-sizing:border-box;}
+      .nav-link{position:relative;}
+      .nav-link::after{
+        content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;
+        background:linear-gradient(90deg,#B8860B,#CD7F32);transition:width .3s ease;
+      }
+      .nav-link:hover::after{width:100%;}
+      .animate-on-scroll{
+        opacity:0;
+        transform:translateY(30px);
+        transition:opacity .5s ease-out,transform .5s ease-out;
+      }
+      .animate-on-scroll.visible{
+        opacity:1;
+        transform:translateY(0);
+      }
+      .floating-card{
+        animation:floating 3s ease-in-out infinite;
+      }
+      @keyframes floating{
+        0%,100%{transform:translateY(0);}
+        50%{transform:translateY(-6px);}
+      }
+    </style>
+  </head>
+
+  <body class="bg-cream text-charcoal font-sans">
+    <!-- NAV -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg shadow-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold to-bronze flex items-center justify-center">
+              <span class="text-white font-serif font-bold text-xl">V</span>
+            </div>
+            <div>
+              <h1 class="font-serif text-2xl font-bold text-darkwood leading-tight">Venus</h1>
+              <p class="text-[11px] text-gold tracking-[0.25em] uppercase">Furnitures</p>
+            </div>
+          </div>
+
+          <div class="hidden lg:flex items-center gap-8 text-sm font-medium">
+            <a href="index.html" class="nav-link text-darkwood">Home</a>
+            <a href="about.html" class="nav-link text-darkwood">About</a>
+            <a href="products.html" class="nav-link text-darkwood">Products</a>
+            <a href="collections.html" class="nav-link text-darkwood">Collections</a>
+            <a href="reviews.html" class="nav-link text-darkwood">Reviews</a>
+            <a href="contact.html" class="nav-link text-gold">Contact / Get Quote</a>
+          </div>
+
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-darkwood">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-lg shadow-xl">
+        <div class="px-4 py-6 space-y-4 text-sm">
+          <a href="index.html" class="block text-darkwood py-2 border-b border-beige">Home</a>
+          <a href="about.html" class="block text-darkwood py-2 border-b border-beige">About</a>
+          <a href="products.html" class="block text-darkwood py-2 border-b border-beige">Products</a>
+          <a href="collections.html" class="block text-darkwood py-2 border-b border-beige">Collections</a>
+          <a href="reviews.html" class="block text-darkwood py-2 border-b border-beige">Reviews</a>
+          <a href="contact.html" class="block text-gold py-2 border-b border-beige">Contact / Get Quote</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-24 pb-16">
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header class="mb-10 animate-on-scroll">
+          <p class="text-xs uppercase tracking-[0.25em] text-gold mb-2">Contact / Get Quote</p>
+          <h1 class="font-serif text-4xl md:text-5xl font-bold text-darkwood mb-3">
+            Visit, Call or Send Your Requirements
+          </h1>
+          <p class="text-sm text-charcoal/70 max-w-2xl">
+            Share your furniture or interior requirements and we will get back with suitable options from
+            Venus Furnitures and Godrej Interio.
+          </p>
+        </header>
+
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <!-- Form -->
+          <div class="bg-white rounded-2xl p-6 border border-beige/70 shadow-sm text-sm animate-on-scroll floating-card">
+            <form action="#" method="post" class="space-y-4">
+              <div>
+                <label class="block text-xs font-semibold text-charcoal/80 mb-1">Name</label>
+                <input type="text" name="name" class="w-full rounded-lg border border-beige px-3 py-2 text-sm bg-cream focus:outline-none focus:ring-1 focus:ring-gold" placeholder="Your name" />
+              </div>
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-charcoal/80 mb-1">Phone</label>
+                  <input type="text" name="phone" class="w-full rounded-lg border border-beige px-3 py-2 text-sm bg-cream focus:outline-none focus:ring-1 focus:ring-gold" placeholder="Mobile number" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-charcoal/80 mb-1">Email (optional)</label>
+                  <input type="email" name="email" class="w-full rounded-lg border border-beige px-3 py-2 text-sm bg-cream focus:outline-none focus:ring-1 focus:ring-gold" placeholder="Email address" />
+                </div>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-charcoal/80 mb-1">City</label>
+                <input type="text" name="city" class="w-full rounded-lg border border-beige px-3 py-2 text-sm bg-cream focus:outline-none focus:ring-1 focus:ring-gold" placeholder="e.g. Pune" />
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-charcoal/80 mb-1">Requirement Type</label>
+                <select name="requirement" class="w-full rounded-lg border border-beige px-3 py-2 text-sm bg-cream focus:outline-none focus:ring-1 focus:ring-gold">
+                  <option>Home furniture</option>
+                  <option>Office / corporate furniture</option>
+                  <option>Resort / farmhouse furniture</option>
+                  <option>Hospital / institutional furniture</option>
+                  <option>Turnkey interiors</option>
+                  <option>Other (mention below)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-charcoal/80 mb-1">Message / Details</label>
+                <textarea name="message" rows="4" class="w-full rounded-lg border border-beige px-3 py-2 text-sm bg-cream focus:outline-none focus:ring-1 focus:ring-gold" placeholder="Furniture list, sizes, room type, budget range, etc."></textarea>
+              </div>
+
+              <button type="submit" class="w-full bg-gradient-to-br from-gold to-bronze text-white py-3 rounded-full text-sm font-semibold">
+                Submit Inquiry
+              </button>
+
+              <p class="text-[11px] text-charcoal/60 mt-2">
+                This is a sample form. Connect actual form submission to your email or CRM as needed.
+              </p>
+            </form>
+          </div>
+
+          <!-- Contact details -->
+          <div class="space-y-6 text-sm animate-on-scroll">
+            <div class="bg-cream rounded-2xl p-5 border border-beige/70">
+              <p class="font-serif text-2xl font-bold text-darkwood mb-3">Showroom Address</p>
+              <p class="text-charcoal/80 mb-3">
+                Plot No. 15, Girnar House,<br/>
+                Adarsh Society, Main Road,<br/>
+                Market Yard, Pune – 411002,<br/>
+                Maharashtra, India.
+              </p>
+              <p class="mb-1">Phone: 020-2426 7831</p>
+              <p class="mb-1">Phone: 020-2426 7832</p>
+              <p class="mb-1">Fax: 020-2426 7832</p>
+              <p class="mb-1">
+                Website:
+                <a href="https://www.venusfurnitures.com/" target="_blank" class="text-gold underline">
+                  www.venusfurnitures.com
+                </a>
+              </p>
+            </div>
+
+            <div class="bg-cream rounded-2xl p-5 border border-beige/70 text-xs">
+              <p class="font-semibold text-darkwood mb-2">Additional Location (Unofficial Listing)</p>
+              <p class="mb-2">
+                Shakti House, Old Sr. NO.143, Next to Gujarwadi Phata,<br/>
+                Satara Rd, Katraj, Pune – 411046.
+              </p>
+              <p>Contact: +91-20-2426-7831</p>
+            </div>
+
+            <div class="bg-white rounded-2xl p-4 border border-beige/70 text-xs">
+              <p class="font-semibold text-darkwood mb-1">How to Use AI Map Image</p>
+              <p class="text-charcoal/70">
+                You can add an AI image or map screenshot here, e.g. “top view map showing Market Yard Pune
+                with pin on Venus Furnitures showroom”.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-darkwood text-white pt-12 pb-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-10 mb-8">
+          <div>
+            <h4 class="font-serif text-2xl font-bold mb-2">Venus Furnitures</h4>
+            <p class="text-white/70 text-sm mb-2">
+              Authorised dealer of Godrej Interio • ISO 9001:2008 certified
+            </p>
+            <p class="text-white/60 text-sm">
+              Furniture and interior solutions for homes, offices, farms, resorts, hospitals,
+              educational institutes and corporate offices.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-serif text-xl font-bold mb-3">Showroom</h4>
+            <p class="text-white/70 text-sm">
+              Plot No. 15, Girnar House,<br/>
+              Adarsh Society, Main Road,<br/>
+              Market Yard, Pune – 411002,<br/>
+              Maharashtra, India.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-serif text-xl font-bold mb-3">Contact</h4>
+            <p class="text-white/70 text-sm">
+              Phone: 020-2426 7831 / 020-2426 7832<br/>
+              Fax: 020-2426 7832<br/>
+              Website: www.venusfurnitures.com
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-4 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/50">
+          <p>© 2024 Venus Furnitures. All rights reserved.</p>
+          <p>Market Yard, Pune • India 🇮🇳</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const mb=document.getElementById('mobile-menu-btn');
+      const mm=document.getElementById('mobile-menu');
+      mb.addEventListener('click',()=>mm.classList.toggle('hidden'));
+      mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mm.classList.add('hidden')));
+
+      const obs=new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});
+      },{threshold:0.2});
+      document.querySelectorAll('.animate-on-scroll').forEach(el=>obs.observe(el));
+    </script>
+  </body>
+</html>
